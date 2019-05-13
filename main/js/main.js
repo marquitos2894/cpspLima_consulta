@@ -7,12 +7,11 @@
 
     function render(){
 
-        this.constructor = async function (){
-
+       /* this.constructor = async function (){
                 let response = await fetch("http://localhost/comprarapida/public/api/alumnos");
                 let data = await response.json();
                 this.getLista = data;
-        }
+        }*/
     
 
         this.sweetalert = function(title,mensaje){
@@ -28,7 +27,7 @@
 
     render = new render();
     document.addEventListener("DOMContentLoaded", async function(){
-      render.constructor();   
+      //render.constructor();   
     });
 
     $("#buscarx").addEventListener("change",function(ev){
