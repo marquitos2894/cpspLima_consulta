@@ -1,0 +1,178 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>cpsp Lima</title>
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="main/css/scrolling-nav.css">
+        <link rel="stylesheet" href="main/css/card.css">
+        <link rel="stylesheet" href="node_modules/sweetalert2/dist/sweetalert2.min.css">
+
+        
+    </head>
+    <body id="page-top">
+
+            <!-- Navigation -->
+            <nav class="navbar navbar-expand-lg navbar-white bg-white fixed-top" id="mainNav">
+              <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">cpsp Lima</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                      <a class="nav-link js-scroll-trigger" href="#about">Regresar</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          
+            <header class="bg-primary text-white">
+              <div class="container text-center">
+                <h1 class="normal" >cpsp Lima | Conoce a tu psicologo</h1>
+              
+              </div>
+            </header>
+          
+                                                      	
+
+            <section id="about">
+              <div class="container">
+
+                    <div class="input-group mx-sm-3 mb-2">
+                      <div class="input-group-prepend">
+                        <button class="btn btn-outline-primary" type="button" id="btnbuscar" >Buscar</button>
+                      </div>
+                      <select id="buscarx" class="form-control border-primary">
+                        <option selected>Buscar por ..</option>
+                        <option>Nombres y apellidos</option>
+                        <option>Numero documento</option>
+                      </select>
+                    </div>
+     
+                    <div id="nomyape" style="display:none">
+                        <div class="input-group mx-sm-3 mb-2">
+                            <div class="input-group-prepend  ">
+                              <span class="input-group-text text-white bg-primary">Apellido Paterno</span>
+                            </div>
+                            <input type="text" id="Apaterno" aria-label="First name" class="form-control">
+                        </div>
+                        <div class="input-group mx-sm-3 mb-2">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text text-white bg-primary">Apellido Materno</span>
+                          </div>
+                          <input type="text"  id="Amaterno" aria-label="First name" class="form-control">
+                        </div>
+                        <div class="input-group mx-sm-3 mb-2"> 
+                          <div class="input-group-prepend">
+                            <span class="input-group-text text-white bg-primary">Nombres</span>
+                          </div>
+                          <input type="text" id="Nombres" aria-label="First name" class="form-control">
+                        </div>
+                    </div>
+
+                    <div id="doc" style="display:none">
+                        <div class="input-group mx-sm-3 mb-2">
+                          <select id="documento" class="form-control" style="width:20%">
+                            <option selected>Seleccione</option>
+                            <option >Colegiatura</option>
+                            <option>Doc. de identidad</option>
+                          </select>
+                          <div class="col-7">
+                            <input type="text" id="nrodocumento" class="form-control" placeholder="nro de documento">
+                          </div>
+                        </div>
+                    </div> 
+                    
+                    <br>
+                    <div id="alerta">
+
+                    </div>
+                <div class="row">
+                  <div class="col-lg-8 mx-auto">
+                        <div class="list-group" id="lista">
+                            <div class="list-group-item list-group-item-action border-primary">           
+                                  <div class="d-flex w-100 justify-content-between">
+                                  <h5>Conoce a tu psicologo <small class="text-muted"></small></h5>
+                                  <small>******</small>
+                                  </div>
+                                  <p class="mb-1"></p>
+                                  Busqueda por nro de colegiatura, doc. de identidad o nombres y apellidos
+                          </div>
+                        </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+       
+            
+            <section id="services" class="bg-light">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-8 mx-auto">
+                    <h2>Services we offer</h2>
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+          
+            <section id="contact">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-8 mx-auto">
+                    <h2>Contact us</h2>
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalCenterTitle">cpsp Lima</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content" id="body">
+                    ...
+                  </div>
+                </div>
+              </div>
+
+            <!-- Footer -->
+            <footer class="py-5 bg-dark">
+              <div class="container">
+                <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+              </div>
+              <!-- /.container -->
+            </footer>
+          
+            <!-- Bootstrap core JavaScript -->
+            <script src="node_modules/sweetalert2/dist/sweetalert2.min.js"></script> 
+            <script src="main/js/main.js"></script>   
+     
+            <script src="node_modules/jquery/dist/jquery.min.js"></script> 
+            <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+            
+
+
+            <!-- Button trigger modal -->
+
+    </body>
+</html>
