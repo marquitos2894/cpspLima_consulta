@@ -1,4 +1,5 @@
 (function(){
+    const server = "localhost"
 
     function $(selector){
         return document.querySelector(selector);
@@ -13,6 +14,19 @@
                 this.getLista = data;
         }*/
     
+        this.loader = function(visible){
+                var load = $("#load");
+            if(visible==true){ 
+                load.style.height="1500px"
+                load.style.width="1500px";
+                load.style.visibility = "visible";
+            }else{
+                load.style.height="100x"
+                load.style.width="100px";
+                load.style.visibility = "hidden";       
+            }
+
+        }
 
         this.sweetalert = function(title,mensaje){
             Swal.fire({
@@ -25,7 +39,7 @@
 
     } 
 
-    render = new render();
+    var render = new render();
     document.addEventListener("DOMContentLoaded", async function(){
       //render.constructor();   
     });
@@ -52,7 +66,7 @@
     $("#about").addEventListener("click", async function(e){
         e.preventDefault(); 
         if(e.target.id == "btnbuscar" ){
-
+            
             buscarx = $("#buscarx").value;
             documento = $("#documento").value;
             Apaterno = $("#Apaterno").value;
@@ -76,21 +90,24 @@
             }
             
             if(validacion==true){
+                render.loader(true);
                 if(buscarx=="Numero documento"){
                     let param = [buscarx,documento,nrodocumento];     
-                    var response = await fetch("http://localhost/cpslima/public/api/colegiados/"+param);  
+                    var response = await fetch("http://"+server+"/cpsplima/public/api/colegiados/"+param);  
                   }
                   else if(buscarx=="Nombres y apellidos"){
                     let param = [buscarx,Apaterno,Amaterno,nombres];     
-                    var response = await fetch("http://localhost/cpslima/public/api/colegiados/"+param);  
+                    var response = await fetch("http://"+server+"/cpsplima/public/api/colegiados/"+param);  
                   }else{
-                    var response = await fetch("http://localhost/cpslima/public/api/colegiados");  
+                    var response = await fetch("http://"+server+"/cpsplima/public/api/colegiados");  
                   }  
                 
                     let data = await response.json();
                     console.log(data);
+
                     let template =``;
                     if(data!='undefined'){
+                        render.loader(false);
                         for(i of  data){
                             console.log(i.Cod_Alumno);
                             template += `
@@ -106,6 +123,7 @@
                             `;
                         }
                     }else{
+                        render.loader(false);
                         template+=`
                             <div class="list-group-item list-group-item-action">     
                                 <div class="d-flex w-100 justify-content-between">
@@ -123,14 +141,12 @@
         
     });
 
-
-
     $("#lista").addEventListener("click", async function(ev){
         ev.preventDefault();
         if(ev.target.id=="codigo"){
             console.log(ev.target.dataset.alumno);
             let param = ev.target.dataset.alumno;
-            let response = await fetch("http://localhost/cpslima/public/api/codalumno/"+param);
+            let response = await fetch("http://"+server+"/cpslima/public/api/codalumno/"+param);
             let data = await response.json();
             console.log(data);
             let template = ``;
