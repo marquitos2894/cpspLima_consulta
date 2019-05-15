@@ -109,16 +109,16 @@
                     if(data!='undefined'){
                         render.loader(false);
                         for(i of  data){
-                            console.log(i.Cod_Alumno);
+                            console.log(parseInt(i.Cod_Matricula));
                             template += `
                             <div class="list-group-item list-group-item-action border-primary">           
                                 <div class="d-flex w-100 justify-content-between">
                                 <h5>${i.Paterno} ${i.Materno}, <small class="text-muted">${i.Nombres}</small></h5>
-                                <small>${i.colegiatura}</small>
+                                <small>${parseInt(i.Cod_Matricula)}</small>
                                 </div>
                                 <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
                                 <small>Donec id elit non mi porta.</small>
-                                <a href="#" class="btn btn-primary"id="codigo"  data-toggle="modal" data-target=".bd-example-modal-lg"  data-alumno="${i.Cod_Alumno}">Detalle</a>         
+                                <a href="#" class="btn btn-primary"id="codigo"  data-toggle="modal" data-target=".bd-example-modal-lg"  data-alumno="${i.Cod_Matricula}">Detalle</a>         
                             </div>
                             `;
                         }
@@ -146,7 +146,7 @@
         if(ev.target.id=="codigo"){
             console.log(ev.target.dataset.alumno);
             let param = ev.target.dataset.alumno;
-            let response = await fetch("http://"+server+"/cpslima/public/api/codalumno/"+param);
+            let response = await fetch("http://"+server+"/cpsplima/public/api/codalumno/"+param);
             let data = await response.json();
             console.log(data);
             let template = ``;
@@ -155,17 +155,21 @@
                         <div>
                             <div class="card profile-card-3">
                                 <div class="background-block">
-                                    
+                                <h1><span class="badge badge-success">Habilitado</span></h1>
                                 </div>
                                 <div class="profile-thumb-block">
                                     <img src="main/img/solologo.png" alt="profile-image" class="profile"/>
                                 </div>
                                 <div class="card-content">
-                                    <h2>${i.Paterno} ${i.Materno} ${i.Nombres} <small><p>${i.colegiatura}</p></small></h3>
-                                    <div class="icon-block"><h3><span class="badge badge-success">Habilitado</span></h3></div>
+                                    <h2>${i.Paterno} ${i.Materno}, ${i.Nombres} </h2>
+                                    
+                                        <div class="icon-block">
+                                            <div class="alert alert-primary" ><h4><strong><small class="text-muted">Vigencia : </small>30/12/2020</strong></h4></div>
+                                        </div>
+                                        <br>
                                     </div>
                                 </div>
-                                <p class="mt-3 w-100 float-left text-center"><strong>.....</strong></p>
+                                <center><h1><strong><small class="text-muted"><h4>Colegiatura</h4></small><strong><span class="badge badge-primary">${parseInt(i.colegiatura)}</span></h1></center>
                         </div>
             `;
             }
