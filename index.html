@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="main/css/pageloader.css">
         <link rel="stylesheet" href="node_modules/sweetalert2/dist/sweetalert2.min.css">
 
-        
+        <link rel="icon" type="image/png" href="main/img/solologo.png" sizes="16x16">
     </head>
     <body id="page-top">
           <!--div class="contenedor_carga">
@@ -17,20 +17,19 @@
             </div>
           </div-->
           <div class="load" id="load">
-              <img src="main/img/img_pageloader.gif" width="30%"/>
-            </div>
+              <img src="main/img/img_pageloader.gif" width="20%"/>
           </div>
             <!-- Navigation -->
             <nav class="navbar navbar-expand-lg navbar-white bg-white fixed-top" id="mainNav">
               <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top">cpsp Lima</a>
+                <a class="navbar-brand js-scroll-trigger" href="#page-top"><strong>Lima-Callao || CDR I</strong> </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                   <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                      <a class="nav-link js-scroll-trigger" href="#about">Regresar</a>
+                      <a class="nav-link js-scroll-trigger" href="#about">Conoce a tu psicologo</a>
                     </li>
                   </ul>
                 </div>
@@ -39,6 +38,7 @@
           
             <header class="bg-primary text-white">
               <div class="container text-center">
+                <img src="main/img/logo.png"   class="img-fluid img-thumbnail" alt="Responsive image" />
                 <h1 class="normal" >cpsp Lima | Conoce a tu psicologo</h1>
               
               </div>
@@ -46,59 +46,60 @@
                                                     	
             <section id="about">
               <div class="container">
-
-
-                    <div class="input-group mx-sm-3 mb-2">
-                      <div class="input-group-prepend">
-                        <button class="btn btn-outline-primary" type="button" id="btnbuscar" >Buscar</button>
-                      </div>
-                      <select id="buscarx" class="form-control border-primary">
-                        <option selected>Buscar por ..</option>
-                        <option>Nombres y apellidos</option>
-                        <option>Numero documento</option>
-                      </select>
-                    </div>
-     
-                    <div id="nomyape" style="display:none">
-                        <div class="input-group mx-sm-3 mb-2">
-                            <div class="input-group-prepend  ">
-                              <span class="input-group-text text-white bg-primary">Apellido Paterno</span>
-                            </div>
-                            <input type="text" id="Apaterno" aria-label="First name" class="form-control">
-                        </div>
-                        <div class="input-group mx-sm-3 mb-2">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text text-white bg-primary">Apellido Materno</span>
-                          </div>
-                          <input type="text"  id="Amaterno" aria-label="First name" class="form-control">
-                        </div>
-                        <div class="input-group mx-sm-3 mb-2"> 
-                          <div class="input-group-prepend">
-                            <span class="input-group-text text-white bg-primary">Nombres</span>
-                          </div>
-                          <input type="text" id="Nombres" aria-label="First name" class="form-control">
-                        </div>
-                    </div>
-
-                    <div id="doc" style="display:none">
-                        <div class="input-group mx-sm-3 mb-2">
-                          <select id="documento" class="form-control" style="width:20%">
-                            <option selected>Seleccione</option>
-                            <option >Colegiatura</option>
-                            <option>Doc. de identidad</option>
-                          </select>
-                          <div class="col-7">
-                            <input type="text" id="nrodocumento" class="form-control" placeholder="nro de documento">
-                          </div>
-                        </div>
-                    </div> 
-
-                    <br>
-                    <div id="alerta">
-
-                    </div>
                 <div class="row">
-                  <div class="col-lg-8 mx-auto">
+                    <div class="col-lg-10 mx-auto">
+                      <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-outline-primary" type="button" id="btnbuscar" >Buscar</button>
+                        </div>
+                        <select id="buscarx" class="form-control border-primary">
+                          <option selected>Buscar por ..</option>
+                          <option>Nombres y apellidos</option>
+                          <option>Numero documento</option>
+                        </select>
+                      </div>
+                    </div>
+                </div>
+                <div class="row">   
+                    <div class="col-lg-10 mx-auto">
+                      <div id="nomyape" style="display:none">
+                          <div class="input-group  mb-2">
+                              <div class="input-group-prepend  ">
+                                <span class="input-group-text text-white bg-primary">Apellido Paterno</span>
+                              </div>
+                              <input type="text" id="Apaterno" aria-label="First name" class="form-control">
+                          </div>
+                          <div class="input-group  mb-2">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text text-white bg-primary">Apellido Materno</span>
+                            </div>
+                            <input type="text"  id="Amaterno" aria-label="First name" class="form-control">
+                          </div>
+                          <div class="input-group  mb-2"> 
+                            <div class="input-group-prepend">
+                              <span class="input-group-text text-white bg-primary">Nombres</span>
+                            </div>
+                            <input type="text" id="Nombres" aria-label="First name" class="form-control">
+                          </div>
+                      </div>
+
+                      <div id="doc" style="display:none">
+                          <div class="input-group  mb-2">
+                            <select id="documento" class="form-control" style="width:20%">
+                              <option selected>Seleccione</option>
+                              <option >Colegiatura</option>
+                              <option>Doc. de identidad</option>
+                            </select>
+                            <div class="col-7">
+                              <input type="text" id="nrodocumento" class="form-control" placeholder="nro de documento">
+                            </div>
+                          </div>
+                      </div> 
+                    </div>
+                </div>
+                    <br>
+                <div class="row">
+                  <div class="col-lg-10 mx-auto">
                         <div class="list-group" id="lista">
                             <div class="list-group-item list-group-item-action border-primary">           
                                   <div class="d-flex w-100 justify-content-between">
@@ -118,24 +119,16 @@
             <section id="services" class="bg-light">
               <div class="container">
                 <div class="row">
-                  <div class="col-lg-8 mx-auto">
-                    <h2>Services we offer</h2>
-                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
+                  <div class="col col-lg-4">
+                    
+                    <p class="lead"></p>
+                    <!--img src="main/img/cpsplimacontact.jpg"/-->
                   </div>
                 </div>
               </div>
             </section>
           
-            <section id="contact">
-              <div class="container">
-                <div class="row">
-                  <div class="col-lg-8 mx-auto">
-                    <h2>Contact us</h2>
-                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
-                  </div>
-                </div>
-              </div>
-            </section>
+
 
               <!-- Modal -->
               <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -148,6 +141,7 @@
                       </button>
                     </div>
                     <div class="modal-body">
+                      
 
                     </div>
                   </div>
@@ -167,7 +161,7 @@
             
             <footer class="py-5 bg-dark">
               <div class="container">
-                <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+                <p class="m-0 text-center text-white">Copyright &copy; 2019 Colegio de Psicólogos del Perú. | All Rights Reserved</p>
               </div>
               <!-- /.container -->
             </footer>
