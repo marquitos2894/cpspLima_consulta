@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/appconmi/public_html/cpspLima_consulta/
+        - /bin/rsync * $DEPLOYPATH
